@@ -14,7 +14,7 @@ import { MoneyFormat } from './MoneyFormat.js';
         const [isMenuOpen, setIsMenuOpen] = useState(false);
 
         return(
-            <div id="tsparticles" className="w-screen h-screen bg-red-950 flex flex-row items-center justify-center p-8 overflow-hidden">
+            <div id="tsparticles" className="w-screen h-screen bg-red-950 flex flex-row items-center justify-center px-4 py-20 md:px-8 md:py-12 overflow-hidden">
 
                 <ParticleAnimation />
 
@@ -30,13 +30,14 @@ import { MoneyFormat } from './MoneyFormat.js';
         return(
             <div className={`flex flex-col justify-evenly items-center lg:w-1/4 md:w-1/3 h-screen text-white transform transition-all duration-1000 ${isMenuOpen ? 'w-0 opacity-0 md:opacity-100 md:mr-8' : 'w-full opacity-100'}`}>
                     
-                <div className='flex flex-col gap-5 justify-center items-center w-full'>
-                    <img src={logo} className='w-2/3' alt='logo' />
-                    <h1 className='text-2xl md:text-3xl xl:text-4xl'>RM. Metro Baru</h1>
+                <div className='flex flex-col gap-3 justify-center items-center w-full'>
+                    <img src={logo} className='w-2/3 mb-5' alt='logo' />
+                    <h1 className='text-4xl md:text-3xl lg:text-4xl'>RM. Metro Baru</h1>
+                    <h2 className='text-xl md:text-lg lg:text-xl'>PASAR JAMBI</h2>
                 </div>
 
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='flex flex-row items-center justify-center gap-2 border border-2 border-white rounded-xl px-3 py-2 text-lg font-semibold hover:bg-white hover:text-red-950 transiton-all duration-300'>
-                    {isMenuOpen ? "Back" : "See Menu"}
+                    {isMenuOpen ? "Kembali" : "Lihat Menu"}
                     <ArrowCircleRightRoundedIcon className={`transition-all duration-1000 transform ${isMenuOpen ? 'rotate-180' : 'rotate-0'}`} />
                 </button>
 
